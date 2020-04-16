@@ -7,8 +7,8 @@
 </head>
 <body>
     <div id="growler">
-        <h1 v-text="appName">
-            {{appName}}
+        <h1 v-text="appName"
+            v-bind:style="[accentColor, headers]">
         </h1>
     </div>
 
@@ -18,7 +18,14 @@
         var growler = new Vue({
             el: "#growler",
             data: {
-                appName: "Growler"
+                appName: "Growler",
+                accentColor: {
+                    color: "#FF6A00"
+                },
+                headers: {
+                    fontFamily: "Verdana",
+                    margin: 0
+                }
             }
         });
     </script>
